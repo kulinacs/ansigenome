@@ -24,7 +24,7 @@ class Scan(object):
         self.export = export
 
         # set the readme output format
-        self.readme_format = c.ALLOWED_GENDOC_FORMATS[0]
+        self.readme_format = config["default_format_gendoc"]
 
         self.roles = utils.roles_dict(self.roles_path, "")
 
