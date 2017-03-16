@@ -45,7 +45,7 @@ class Scan(object):
         # only load and validate the readme when generating docs
         if self.gendoc:
             # only change the format if it is different than the default
-            if not self.options.format == self.readme_format:
+            if self.options.format is not None:
                 self.readme_format = self.options.format
 
             extend_path = self.config["options_readme_template"]
